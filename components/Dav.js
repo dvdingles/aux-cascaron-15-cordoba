@@ -6,31 +6,31 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/4D BANG BRANDING.gltf");
+  const { nodes, materials } = useGLTF("/3D BUARFE DELUXE.gltf");
   return (
     <group {...props} dispose={null}>
-      <group position={[0, -0.07, -0.03]} rotation={[0.02, 0, 0]}>
+      <group position={[0, 0, 0.01]}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["_1TQ_ARD-geom"].geometry}
-          material={materials._1TQ_ARD_front}
+          geometry={nodes["TQ_ARD-geom"].geometry}
+          material={materials.TQ_ARD_front}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["_1TQ_ARD-geom_1"].geometry}
-          material={materials._1TQ_ARD_back}
+          geometry={nodes["TQ_ARD-geom_1"].geometry}
+          material={materials.TQ_ARD_back}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["_1TQ_ARD-geom_2"].geometry}
-          material={materials._1TQ_ARD_edge}
+          geometry={nodes["TQ_ARD-geom_2"].geometry}
+          material={materials.TQ_ARD_edge}
         />
       </group>
     </group>
   );
 }
 
-useGLTF.preload("/4D BANG BRANDING.gltf");
+useGLTF.preload("/3D BUARFE DELUXE.gltf");
